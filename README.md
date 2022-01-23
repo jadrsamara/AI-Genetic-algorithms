@@ -141,13 +141,18 @@ There are many settings you can adjust, some for the algorithm itself like:
 
 And some for the program like:
 
-`Iterations` :	which is how many times to run the algorithm – in order to better our chance to find a good result. This is followed by a checkmark with Infinite by it, when checked the program runs forever.
+`Iterations` :	which is how many times to run the algorithm – in order to better our chance to find a good result.
+This is followed by a checkmark with Infinite by it, when checked the program runs forever.
 
 `Fitness Stop value` :	which tells the program to stop if a solution with that fitness is found.
 
 `Not Ranked` :	selects what solutions to show based on fitness (the number of satisfied groups).
 
-these choices: ![Image](https://raw.githubusercontent.com/jadrsamara/AI-Genetic-algorithms/main/assets/2.png) Are some optimizations. 
+these choices: 
+
+![Image](https://raw.githubusercontent.com/jadrsamara/AI-Genetic-algorithms/main/assets/2_cropped.png) 
+
+Are some optimizations. 
 
 The first one has two choices: 
 
@@ -155,18 +160,30 @@ The first one has two choices:
 
 `Random` :	means the random projects chosen initially are random from 1 – 38.
 
-`Random – Diff.` :	this is basically the same, but the difference between the number of groups and number of projects (in our case =|36-38| = 2) will then be the number of unwanted projects (projects no group has chosen) that we can discard from the random process.
+`Random – Diff.` :	this is basically the same, but the difference between the number of groups and number of projects 
+(in our case =|36-38| = 2) will then be the number of unwanted projects (projects no group has chosen) 
+that we can discard from the random process.
 The random process is in the initial population generation and in the crossover correction. (When a project is repeated after a crossover)
 
-The second has three choices: ![Image](https://raw.githubusercontent.com/jadrsamara/AI-Genetic-algorithms/main/assets/4.png) this controlls the Fitness function used by the algorithm.
+The second has three choices: 
 
-`Satisfied groups favorable` :	calculates the fitness based on all of the three choices favoring the number of satisfied groups, followed by the number of groups with their first choice, then the number of groups with their second, and lastly, the number of groups with their third choice.
+![Image](https://raw.githubusercontent.com/jadrsamara/AI-Genetic-algorithms/main/assets/4.png) 
+
+this controlls the Fitness function used by the algorithm.
+
+`Satisfied groups favorable` :	calculates the fitness based on all of the three choices favoring the number of satisfied groups, 
+followed by the number of groups with their first choice, then the number of groups with their second, 
+and lastly, the number of groups with their third choice.
 
 `First choice favorable` :	calculates the fitness only based on the number of groups with their first choice.
 
 `Not Ranked` :	calculates the fitness only based on the number of satisfied groups (any of the three choices). The choice Satisfied groups favorable is the best of two worlds.
 
-The option: ![Image](https://raw.githubusercontent.com/jadrsamara/AI-Genetic-algorithms/main/assets/5.png) selects how many processes you wish to run at the same time for each run (`Iteration`) of the program.
+The option: 
+
+![Image](https://raw.githubusercontent.com/jadrsamara/AI-Genetic-algorithms/main/assets/5.png) 
+
+selects how many processes you wish to run at the same time for each run (`Iteration`) of the program.
 
 
 ### Running the algorithm
