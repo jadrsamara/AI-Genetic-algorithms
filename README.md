@@ -1,6 +1,29 @@
 # AI-Genetic-algorithms
 An Artificial intelligence project for Distributing Graduation Projects using Genetic algorithms
 
+## Problem Formalization 
+Before trying to solve any problem, it is a good habit to formulate the problem.
+
+Graduation Projects Distribution Problem Formulation:
+
+###	states: Projects distribution.
+
+###	initial state: Population with a set of Random project distributions.
+
+###	successor function (operators): Evolution.
+
+Crossover and mutation of the better half of the population (better meaning by fitness),
+creating a new population. With the top 2 distributions kept to insure not going backwards.
+
+###	goal test: Arrive at a certain number of satisfied groups, or after a set number of iterations.
+
+The number of iterations is the number of evolution times done, which we call number of generations.
+
+###	path cost: fitness function
+
+Number of satisfied groups, with bigger weight on the first choice then second then finally the last choice with the least weight.
+
+
 ## implementation
 Genetic algorithms look at the problem as natural selections, and the solution as a gene with the population as a set of genes (solutions). Genetic algorithms are comprised of five phases which are: the generation of the initial population, the Fitness function to differentiate between the different genes, the selection method to select the genes to crossover, the crossover method and finally the mutation.
 
