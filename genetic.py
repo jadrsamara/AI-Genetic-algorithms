@@ -72,8 +72,8 @@ def fitness(genome_under_testing: Genome) -> [int, int, list]:
 
 def update_fitness(choice: str):
     switcher = {
-        "Satisfied groups favourable": 0,
-        "First choice favourable": 1,
+        "Satisfied groups favorable": 0,
+        "First choice favorable": 1,
         "Not Ranked": 2
     }
     global fitness_type
@@ -394,6 +394,9 @@ def threaded_start(iterations: int, generations: int, threshold: int):
         if exit_event.is_set():
             break
 
+        # temp = start_evolution(generations, threshold)
+        # populations += temp[0]
+
         ar = []
         for k in range(scale_6.get()):
             ar += [[generations, threshold, file_name_1]]
@@ -439,6 +442,7 @@ def threaded_start(iterations: int, generations: int, threshold: int):
         reverse=True
     )
 
+    # if file 2 is entered
     if len(file_name_2) > 0:
         res_on_process(populations[0])
 
@@ -524,8 +528,8 @@ if __name__ == '__main__':
     # fitness function selection
     variable = StringVar(root)
     # variable.set("Satisfied groups favourable")  # default value
-    drop_down = ttk.OptionMenu(root, variable, "Satisfied groups favourable", "Satisfied groups favourable",
-                               "First choice favourable", "Not Ranked",
+    drop_down = ttk.OptionMenu(root, variable, "Satisfied groups favorable", "Satisfied groups favorable",
+                               "First choice favorable", "Not Ranked",
                                command=update_fitness)
     drop_down.configure(width=25)
     drop_down.place(x=630, y=190)
